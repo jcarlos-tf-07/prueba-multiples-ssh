@@ -65,7 +65,7 @@ Host nombrecualquiera2
     HostName github.com
     User git
     IdentityFile ~/.ssh/id_rsa2
-...
+```
 si ya tuvieras una cuenta principal y solo agregaste ota clave seria asi:
 
 ```sh
@@ -74,7 +74,7 @@ Host github.com
     HostName github.com
     User git
     IdentityFile ~/.ssh/id_rsa
-...
+```
 
 para clonar:
 Si trabajamos con nuestra cuenta personal y ya estaba generado esa clave, haríamos un clone de la siguiente forma:
