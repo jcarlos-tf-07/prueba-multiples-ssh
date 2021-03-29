@@ -5,7 +5,10 @@ repositorio para probar en local el funcionamiento de multiples cuentas de git.
 ## generar claves
 Pega el siguiente texto, que sustituye tu dirección de correo electrónico en GitHub.
 
+```sh
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
 Esto crea una nueva clave ssh usando el correo electrónico proporcionado como etiqueta.
 
 > Generating public/private rsa key pair.
@@ -30,13 +33,14 @@ Agrega tu llave privada SSH al ssh-agent. Si creaste tu llave con un nombre dist
 
 $ ssh-add ~/.ssh/id_rsa
 
-
 una vez que se ha generado las claves, se procede a copiar las claves para insertarlas en tu cuenta de github.
 
 se puede ir directamente a la carpeta en este caso linux, en /home/nombredeusuario/.ssh/
 dentro se abre con un editor el archivo id_rsa.pub y se copia su contenido.
 o desde la terminal
+```sh
 xclip -sel clip < ~/.ssh/id_rsa.pub
+```
 
 ## Agregar otra clave ssh
 para este caso se siguen los mismos pasos anteriores practicamente.
@@ -78,13 +82,14 @@ Host github.com
 
 para clonar:
 Si trabajamos con nuestra cuenta personal y ya estaba generado esa clave, haríamos un clone de la siguiente forma:
-
+```sh
 git clone git@github.com:miusuario/repositorio.git
+```
 
-
-cuando estemos utilizando cualquier cuenta, vamos a cambiar el nombre del host.
-
+cuando estemos utilizando cualquier cuenta o de una empresa, vamos a cambiar el nombre del host.
+```sh
 git clone git@nombrecualquiera1:empresa/repositorio.git
+```
 
 ## Agregando nombre y correo 
 se agregan estos datos en la carpeta del repositorio clonado
@@ -95,9 +100,11 @@ Como detalle final, deberíamos ajustar la configuración de los repositorios pa
 
 Para esto, vamos a setear 3 variables locales del repositorio. Parados dentro del mismo ejecutamos:
 
+```sh
 git config user.name "Damián Culotta"
 git config user.email "damian@ejemplo.com.ar"
 git config github.user damian-ejemplo
+```
 
 De esta forma, en lugar de utilizarse los valores globales (que en mi caso sirven para mi cuenta personal), el repositorio usará las configuraciones específicas.
 
