@@ -53,6 +53,7 @@ Para esto, necesitamos crear el archivo config (si es que no existiera) dentro d
 
 Una vez creado, vamos a agregar el siguiente contenido.
 
+```sh
 #repositorio 1
 Host nombrecualquiera1
     HostName github.com
@@ -64,15 +65,16 @@ Host nombrecualquiera2
     HostName github.com
     User git
     IdentityFile ~/.ssh/id_rsa2
-
+...
 si ya tuvieras una cuenta principal y solo agregaste ota clave seria asi:
 
-
+```sh
 #Default GitHub
 Host github.com
     HostName github.com
     User git
     IdentityFile ~/.ssh/id_rsa
+...
 
 para clonar:
 Si trabajamos con nuestra cuenta personal y ya estaba generado esa clave, haríamos un clone de la siguiente forma:
