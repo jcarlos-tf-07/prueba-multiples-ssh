@@ -65,6 +65,8 @@ Host nombrecualquiera1
     IdentityFile ~/.ssh/id_rsa1
 
 #repositorio 2
+#en Host donde dice nombrecualquiera2 asi como lo dice, puede ser cualquier nombre
+#este nombre se utilizara para aser referencia cuando se clone un repositorio y se le indicara que clave ssh se usara
 Host nombrecualquiera2
     HostName github.com
     User git
